@@ -21,7 +21,7 @@
             "cleanname":"NORD-EXAMPLE2",
             "nrd_v1_addr":"Nx03",
             "authtoken":"@NOT-SET",
-            "cmd":true
+            "cmd":false
         },
         "nordex3": {
             "cleanname":"NORD-EXAMPLE3",

@@ -16,7 +16,7 @@ DClient.on("ready", () => {
     const embed = new MessageBuilder()
     .addField("Client", "Discord Bot", true)
     .addField("Status", "Logged in.", true)
-    .setColor('#A3BE8C')
+    .setColor("#A3BE8C")
     Hook.send(embed);
 });
 const connectedSockets = new Set();
@@ -49,7 +49,7 @@ Server.on("connection", function(sock) {
                     const embed = new MessageBuilder()
                     .addField("Client", cleanname, true)
                     .addField("Status", "Authenticated successfully.", true)
-                    .setColor('#A3BE8C')
+                    .setColor("#A3BE8C")
                     Hook.send(embed);
                     connectedSockets.add(sock);
                 } else {
@@ -58,7 +58,7 @@ Server.on("connection", function(sock) {
                     const embed = new MessageBuilder()
                     .addField("Client", cleanname, true)
                     .addField("Status", "Authentication failed.", true)
-                    .setColor('#BF616A')
+                    .setColor("#BF616A")
                     Hook.send(embed);
                 }
             } else {
@@ -67,7 +67,7 @@ Server.on("connection", function(sock) {
                 const embed = new MessageBuilder()
                 .addField("Client", "Unkown", true)
                 .addField("Status", "Authentication failed due to too few arguments.", true)
-                .setColor('#BF616A')
+                .setColor("#BF616A")
                 Hook.send(embed);
             }
         } else if(pData[0] == "@close-cb") {
@@ -76,7 +76,7 @@ Server.on("connection", function(sock) {
                 const embed = new MessageBuilder()
                 .addField("Client", cleanname, true)
                 .addField("Status", "Closed.", true)
-                .setColor('#EBCB8B')
+                .setColor("#EBCB8B")
                 Hook.send(embed);
             }
         }
@@ -87,14 +87,14 @@ Server.on("connection", function(sock) {
             const embed = new MessageBuilder()
             .addField("Client", cleanname, true)
             .addField("Status", "Closed (but not safely/registered).", true)
-            .setColor('#BF616A')
+            .setColor("#BF616A")
             Hook.send(embed);
         }
     });
 
     DClient.on("messageCreate", (msg) => {
         var content = msg.content;
-        var args = content.split(' ').slice(1);
+        var args = content.split(" ").slice(1);
         if(content.startsWith("!reauth")) {
             connectedSockets.broadcast(Buffer.from("@auth"), sock);
         } else if(content.startsWith("!close-rq all")) {
@@ -109,7 +109,7 @@ process.on("uncaughtException", function(err) {
     .addField("Client", "Router", true)
     .addField("Status", "Critical error occurred", true)
     .setDescription("`" + err.stack + "`")
-    .setColor('#BF616A')
+    .setColor("#BF616A")
     Hook.send(embed);
 });
 
