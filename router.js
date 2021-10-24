@@ -24,7 +24,7 @@ const devices = JSON.parse(FS.readFileSync("devices.json"));
 const Server = Net.createServer();
 Server.listen(2345, "0.0.0.0");
 console.log("Router listening.");
-connectedSockets.broadcast = function(data, except) {
+connectedSockets.broadcast = function(data) {
     for(let sock of this) {
         sock.write(data);
     }
