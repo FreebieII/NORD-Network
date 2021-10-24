@@ -1,0 +1,33 @@
+[
+    {
+        "router": {
+            "cleanname":"NORD-ROUTER",
+            "nrd_v1_addr":"Nx00",
+            "cmd":true
+        },
+        "simtest": {
+            "cleanname":"SIM-TEST",
+            "nrd_v1_addr":"Nx01",
+            "authtoken":"@NOT-SET",
+            "cmd":true
+        },
+        "nordex1": {
+            "cleanname":"NORD-EXAMPLE1",
+            "nrd_v1_addr":"Nx02",
+            "authtoken":"test123",
+            "cmd":true
+        },
+        "nordex2": {
+            "cleanname":"NORD-EXAMPLE2",
+            "nrd_v1_addr":"Nx03",
+            "authtoken":"@NOT-SET",
+            "cmd":true
+        },
+        "nordex3": {
+            "cleanname":"NORD-EXAMPLE3",
+            "nrd_v1_addr":"Nx04",
+            "authtoken":"@NOT-SET",
+            "cmd":false
+        }
+    }
+]

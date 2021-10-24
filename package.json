@@ -1,0 +1,17 @@
+{
+  "name": "nord-network",
+  "version": "1.0.0",
+  "description": "Connect your various devices to an endpoint.",
+  "main": "router.js",
+  "scripts": {
+    "start": "node router.js"
+  },
+  "author": "Northernside",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "discord-webhook-node": "^1.1.8",
+    "discord.js": "^13.2.0",
+    "fs": "^0.0.1-security",
+    "net": "^1.0.2"
+  }
+}
