@@ -12,7 +12,7 @@ const DClient = new DiscordJS.Client({
 DClient.on("ready", () => {
     console.log("Discord bot logged in.");
     Hook.setUsername("Router");
-    Hook.setAvatar("https://www.nt-sat-elektronik.de/images/Computer_Hardware/Fritzbox-7490_02.jpg");
+    Hook.setAvatar("https://secure.gravatar.com/avatar/4563f201bc4aa68f8c9c78948828408f?d=robohash&s");
     const embed = new MessageBuilder()
     .addField("Client", "Discord Bot", true)
     .addField("Status", "Logged in.", true)
@@ -108,7 +108,7 @@ process.on("uncaughtException", function(err) {
     const embed = new MessageBuilder()
     .addField("Client", "Router", true)
     .addField("Status", "Critical error occurred", true)
-    .setDescription("`" + err.stack + "`")
+    .setDescription("```" + err.stack + "\n```")
     .setColor("#BF616A")
     Hook.send(embed);
 });
